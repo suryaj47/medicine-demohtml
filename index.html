@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine Reminder</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    max-width:350px;
+}
+
+h1{
+    color:#2c3e50;
+}
+
+.medicine{
+    font-size:22px;
+    font-weight:bold;
+    color:#1e88e5;
+}
+
+.time{
+    font-size:20px;
+    margin-top:10px;
+    color:#27ae60;
+}
+
+.steps{
+    text-align:left;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    background:#1e88e5;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+}
+
+button:active{
+    background:#1565c0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💊 Medicine Reminder</h1>
+
+<p class="medicine">Paracetamol Tablet</p>
+
+<p class="time">Take at: 8:00 AM</p>
+
+<div class="steps">
+<ul>
+<li>Take 1 tablet</li>
+<li>Drink a glass of water</li>
+<li>Take after breakfast</li>
+</ul>
+</div>
+
+<button onclick="taken()">Mark as Taken ✔</button>
+
+<p id="status"></p>
+
+</div>
+
+<script>
+function taken(){
+    document.getElementById("status").innerHTML =
+    "✅ Medicine Taken. Good job!";
+}
+</script>
+
+</body>
+</html>
